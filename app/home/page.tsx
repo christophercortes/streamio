@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <main className="min-h-screen bg-zinc-950 px-6 text-white">
             <header className="mb-12">
-                <h1 className="text-4xl font-bold tracking-tight mt-10">Streamio</h1>
+                <h1 className="text-4xl font-bold tracking-tight mt-10">Streamio+</h1>
                 <p className="mt-2 text-zinc-400">Watch live TV anywhere</p>
             </header>
 

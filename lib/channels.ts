@@ -12,7 +12,7 @@ export const channels: Channel[] = [
         name: "Canal 13",
         description: "Canal en vivo",
         logo: "/channel0.png",
-        streamUrl: "https://dai.google.com/linear/hls/pa/event/nthipJzGQY-A-N0t6xCZhA/stream/677f52c1-5308-40c4-8f04-d50e3e14386b:SCL2/master.m3u8",
+        streamUrl: "https://dai.google.com/linear/hls/pa/event/nthipJzGQY-A-N0t6xCZhA/stream/39c25cbd-6639-49b8-8ee0-bf5c966b93fb:SCL2/master.m3u8",
     },
     {
         id: 1,
@@ -33,7 +33,21 @@ export const channels: Channel[] = [
         name: "13 Kids",
         description: "Canal en vivo",
         logo: "/channel3.png",
-        streamUrl: "https://dai.google.com/linear/hls/pa/event/LhHrVtyeQkKZ-Ye_xEU75g/stream/14a8fad7-7fb0-4614-9d40-bf366c3a571f:SCL2/master.m3u8",
+        streamUrl: "https://dai.google.com/linear/hls/pa/event/LhHrVtyeQkKZ-Ye_xEU75g/stream/34b3d7e8-53c2-4323-8397-b6ca9163e939:SCL2/master.m3u8",
+    },
+    {
+        id: 4,
+        name: "TVN",
+        description: "Canal en vivo",
+        logo: "/channel4.png",
+        streamUrl: "https://iptv2.intersurtv.cl/TVN/index.m3u8",
+    },
+    {
+        id: 5,
+        name: "Mega",
+        description: "Canal en vivo",
+        logo: "/channel5.png",
+        streamUrl: "https://unlimited2-cl-isp.dps.live/mega/mega.smil/playlist.m3u8",
     },
     {
         id: 10,
