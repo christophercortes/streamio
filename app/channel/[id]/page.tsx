@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { channels } from "@/lib/channels";
-import VideoPlayer from "@/components/VideoPlayer";
+import VideoPlayer from "@/ui/VideoPlayer";
 
 type Props = {
     params: Promise<{
