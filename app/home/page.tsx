@@ -1,4 +1,4 @@
-import ChannelSection from "@/components/ChannelSection";
+import ChannelSection from "@/ui/ChannelSection";
 import { channels } from "@/lib/channels";
 
 const liveChannels = channels.filter((channel) => channel.id < 10);
