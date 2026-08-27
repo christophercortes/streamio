@@ -13,7 +13,7 @@ export default function ChannelCarousel({
 }: ChannelCarouselProps) {
     return (
         <section>
-            <div className="mt-4 grid grid-cols-4 gap-2">
+            <div className="mt-4 grid grid-cols-4 gap-4">
                 {channels.map((channel) => {
                 const isSelected = channel.id === selectedChanneld;
 
@@ -21,9 +21,9 @@ export default function ChannelCarousel({
                     <Image
                         src={channel.logo}
                         alt="logo"
-                        width={20}
-                        height={20}
-                        className="h-14 w-14 rounded-full object-contain border-yellow-400 bg-white"
+                        width={40}
+                        height={40}
+                        className="h-18 w-18 rounded-full object-contain border-yellow-400 bg-white"
                     />
                 )
             })}</div>
