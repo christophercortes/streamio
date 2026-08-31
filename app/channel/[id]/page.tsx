@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import { channels } from "@/lib/channels";
-import VideoPlayer from "@/ui/VideoPlayer";
+import { channels } from "@/app/lib/channels";
+import VideoPlayer from "@/app/ui/VideoPlayer";
 
 type Props = {
     params: Promise<{
@@ -20,7 +20,7 @@ export default async function ChannelPage({ params }: Props) {
     }
 
     return (
-        <main className="min-h-screen bg-zinc-950 px-6 py-10 text-white">
+        <main className="min-h-screen bg-zinc-950 px-6 py-2 text-white">
             <h1 className="mb-2 text-3xl font-bold">{channel.name}</h1>
             <p className="text-zinc-400">{channel.description}</p>
             <div className="mt-6 aspect-video rounded-xl bg-black">

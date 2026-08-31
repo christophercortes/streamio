@@ -12,7 +12,7 @@ export const channels: Channel[] = [
         name: "Canal 13",
         description: "Canal en vivo",
         logo: "/channel0.png",
-        streamUrl: "https://dai.google.com/linear/hls/pa/event/nthipJzGQY-A-N0t6xCZhA/stream/39c25cbd-6639-49b8-8ee0-bf5c966b93fb:SCL2/master.m3u8",
+        streamUrl: "https://dai.google.com/linear/hls/pa/event/nthipJzGQY-A-N0t6xCZhA/stream/7d13b112-c722-4341-853f-b08b5fb80c9b:SCL2/master.m3u8",
     },
     {
         id: 1,
@@ -33,7 +33,7 @@ export const channels: Channel[] = [
         name: "13 Kids",
         description: "Canal en vivo",
         logo: "/channel3.png",
-        streamUrl: "https://dai.google.com/linear/hls/pa/event/LhHrVtyeQkKZ-Ye_xEU75g/stream/34b3d7e8-53c2-4323-8397-b6ca9163e939:SCL2/master.m3u8",
+        streamUrl: "https://dai.google.com/linear/hls/pa/event/LhHrVtyeQkKZ-Ye_xEU75g/stream/2a729833-37f6-4fcf-aee8-7475a3c35dbb:SCL2/master.m3u8",
     },
     {
         id: 4,

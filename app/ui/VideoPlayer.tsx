@@ -24,6 +24,7 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
         console.log("Using hls.js");
 
         const hls = new Hls({
+            
             enableWorker: true,
         });
 
@@ -32,14 +33,14 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
 
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
             console.log("HLS manifest loaded");
-            setStatus("Stream loaded");
+            setStatus("🔴 Live");
         });
 
         hls.on(Hls.Events.ERROR, (_, data) => {
             console.error("HLS error:", data);
 
             if (data.fatal) {
-                setStatus(`Stream error: ${data.details}`);
+                setStatus(`❌ Not available: ${data.details}`);
             }
         });
 
@@ -49,18 +50,22 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
     }, [src]);
 
     return (
-        <div className="relative h-full w-full bg-black">
-            <video
-                ref={videoRef}
-                controls
-                autoPlay
-                playsInline
-                className="h-full w-full rounded-xl"
-            />
+        <section className="w-full px-2 sm:px-4 md:px-6">
+            <div className="mx-auto w-full max-w-6xl overflow-hidden rounded-lg sm:rounded-xl">
+                <div className="relative aspect-video w-full bg-black">
+                    <video
+                        ref={videoRef}
+                        controls
+                        autoPlay
+                        playsInline
+                        className="h-full w-full object-contain"
+                    />
 
-            <div className="absolute bottom-16 left-4 rounded bg-black/70 px-3 py-2 text-sm text-white">
-                {status}
+                    <div className="absolute bottom-16 left-4 rounded bg-black/70 px-3 py-2 text-xs text-white backdrop-blur-sm md:text-sm">
+                        {status}
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
