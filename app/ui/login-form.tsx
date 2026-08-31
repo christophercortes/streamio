@@ -34,7 +34,8 @@ export default function LoginForm() {
                 name="email"
                 placeholder="Enter your email address"
                 required
-              />            </div>
+              />
+            </div>
           </div>
           <div className="mt-4">
             <label
@@ -58,7 +59,7 @@ export default function LoginForm() {
           </div>
         </div>
         <input type="hidden" name="redirectTo" value={callbackUrl} />
-          <button> Log In</button>
+        <button> Log In</button>
         <div
           className="flex h-8 items-end space-x-1"
           aria-live="polite"

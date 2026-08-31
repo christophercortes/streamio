@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { signOut } from "@/auth";
 
 export default function Navigation() {
@@ -7,9 +8,14 @@ export default function Navigation() {
                 <p className="text-4xl font-bold">Streamio<span className="text-yellow-400">+</span></p>
                 <p className="text-zinc-400">Watch live TV anywhere</p>
             </div>
-            <div className="ml-auto mb-auto border-2 border-solid px-2 py-1 font-semibold">
-                <button>Log In</button>
-            </div>
+
+            <Link
+                href="/login"
+                className="ml-auto mb-auto border-2 border-solid px-2 py-1 font-semibold"
+            >
+                <span>Log In</span>
+            </Link>
+
             <div>
                 <form
                     action={async () => {
