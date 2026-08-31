@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { channels } from "@/lib/channels";
-import ChannelCarousel from "@/ui/ChannelCarousel";
+import { channels } from "@/app/lib/channels";
+import ChannelCarousel from "@/app/ui/ChannelCarousel";
 
 export default function Home() {
   const [selectedChannelId, setSelectedChannelId] = useState(channels[0].id);

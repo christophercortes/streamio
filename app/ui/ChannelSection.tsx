@@ -1,5 +1,5 @@
 import ChannelCard from "./ChannelCard";
-import type { Channel } from "@/lib/channels";
+import type { Channel } from "@/app/lib/channels";
 
 type ChannelSectionProps = {
     title: string

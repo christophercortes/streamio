@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { channels } from "@/lib/channels";
+import { channels } from "@/app/lib/channels";
 
 type ChannelCarouselProps = {
     selectedChanneld: number;
@@ -19,6 +19,7 @@ export default function ChannelCarousel({
 
                 return (
                     <Image
+                        key={channel.id}
                         src={channel.logo}
                         alt="logo"
                         width={40}
