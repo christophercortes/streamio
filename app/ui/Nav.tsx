@@ -33,17 +33,17 @@ export default function Navigation() {
                         Home
                     </Link>
                     <Link
-                        href="/home"
+                        href="/live"
                         className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover-bg-zinc-900 hover:text-white lg:px-4">
                         Live TV
                     </Link>
                     <Link
-                        href="/home"
+                        href="/movies"
                         className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover-bg-zinc-900 hover:text-white lg:px-4">
                         Movies
                     </Link>
                     <Link
-                        href="/home"
+                        href="/shows"
                         className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover-bg-zinc-900 hover:text-white lg:px-4">
                         Shows
                     </Link>

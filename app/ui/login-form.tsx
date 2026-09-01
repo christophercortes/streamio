@@ -15,8 +15,8 @@ export default function LoginForm() {
   return (
     <form action={formAction} className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
-        <h1 className="mb-3 text-2xl">
-          Please log in to continue.
+        <h1 className="mb-3 text-center text-2xl">
+          Please log in to continue
         </h1>
         <div className="w-full">
           <div>
@@ -59,7 +59,9 @@ export default function LoginForm() {
           </div>
         </div>
         <input type="hidden" name="redirectTo" value={callbackUrl} />
-        <button> Log In</button>
+        <button className="peer mt-4 bg-zinc-950 text-white block w-full rounded-md border border-gray-200 py-2 text-sm outline-2 transition hover:border-zinc-500 hover:bg-zinc-900">
+          Log In
+        </button>
         <div
           className="flex h-8 items-end space-x-1"
           aria-live="polite"
