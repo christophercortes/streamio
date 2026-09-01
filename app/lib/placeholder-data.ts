@@ -1,9 +1,9 @@
 const user = [
     {
-        id: '410544b2-4001-4271-9855-fec4b6a6442a',
-        name: 'User',
-        email: 'user@nextmail.com',
-        password: '123456',
+        id: '46944cf9-8586-4a41-8077-786ebdf690d8',
+        name: 'Christopher',
+        email: 'chris@mail.com',
+        password: 'chris@',
     }
 ];
 
