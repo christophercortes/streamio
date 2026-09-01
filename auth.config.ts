@@ -9,9 +9,10 @@ export const authConfig = {
       const isLoggedIn = !!auth?.user;
 
       const isProtectedRoute =
-        nextUrl.pathname.startsWith('/') ||
-        nextUrl.pathname.startsWith('/home') ||
-        nextUrl.pathname.startsWith('/channel');
+        nextUrl.pathname.startsWith('/');
+        // nextUrl.pathname.startsWith('/home') ||
+        // nextUrl.pathname.startsWith('/channel') ||
+        // nextUrl.pathname.startsWith('/live');
       
       if (isProtectedRoute) {
          return true;
