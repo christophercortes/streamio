@@ -3,9 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { signOut } from "@/auth";
+import { logOut } from "../lib/actions";
 
-export default function Navigation() {
+type NavigationProp = {
+    isLoggedIn: boolean;
+};
+
+export default function Navigation({
+    isLoggedIn,
+}: NavigationProp) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -29,33 +35,43 @@ export default function Navigation() {
                 <div className="hidden items-center gap-1 md:flex lg:gap-2">
                     <Link
                         href="/home"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover-bg-zinc-900 hover:text-white lg:px-4">
+                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
                         Home
                     </Link>
                     <Link
                         href="/live"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover-bg-zinc-900 hover:text-white lg:px-4">
+                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
                         Live TV
                     </Link>
                     <Link
                         href="/movies"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover-bg-zinc-900 hover:text-white lg:px-4">
+                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
                         Movies
                     </Link>
                     <Link
                         href="/shows"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover-bg-zinc-900 hover:text-white lg:px-4">
+                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
                         Shows
                     </Link>
                 </div>
-
-                <div className="hidden md:flex md:items-center">
-                    <Link
-                        href="/login"
-                        className="rounded-lg border border-zinc-700 px-3 py-1.5 text-sm font-semibold transition hover:border-zinc-500 hover:bg-zinc-900 sm:px-4 sm:py-2 sm:text-base"
-                    >
-                        <span className="">Log In</span>
-                    </Link>
+                <div className="hidden md:block">
+                    {isLoggedIn ? (
+                        <form action={logOut}>
+                            <button
+                                type="submit"
+                                className="rounded-lg border border-zinc-700 px-3 py-1.5 text-sm font-semibold transition hover:border-zinc-500 hover:bg-zinc-900 sm:px-4 sm:py-2 sm:text-base"
+                            >
+                                Sign Out
+                            </button>
+                        </form>
+                    ) : (
+                        <Link
+                            href="/login"
+                            className="rounded-lg border border-zinc-700 px-3 py-1.5 text-sm font-semibold transition hover:border-zinc-500 hover:bg-zinc-900 sm:px-4 sm:py-2 sm:text-base"
+                        >
+                            <span className="">Log In</span>
+                        </Link>
+                    )}
                 </div>
 
                 {/* Mobile Menu Button*/}
@@ -68,36 +84,26 @@ export default function Navigation() {
                 >
                     <div className="space-y-1.5">
                         <span
-                            className={`block h-0.5 w-6 bg-current tansition ${
-                                isOpen
-                                ? "transition-y-2 rotate-45"
-                                : ""
-                            }`}
+                            className={`block h-0.5 w-6 bg-current transition ${isOpen
+                                    ? "translate-y-2 rotate-45"
+                                    : ""
+                                }`}
                         />
                         <span
-                            className={`block h-0.5 w-6 bg-current tansition ${
-                                isOpen
-                                ? "-translate-y-2 -rotate-45"
-                                : ""
-                            }`}
+                            className={`block h-0.5 w-6 bg-current transition ${isOpen
+                                    ? "-translate-y-2 -rotate-45"
+                                    : ""
+                                }`}
                         />
                     </div>
                 </button>
-                {/* <div>
-                    <form
-                        action={async () => {
-                            'use server';
-                            await signOut({ redirectTo: '/' });
-                        }}
-                    />
-                </div> */}
             </div>
-            {/* Mobile */}
+
+            {/* Mobile menu*/}
             <div
-                className={`overflow-hidden border-t border-zinc-800 transition-all duration-300 md:hidden ${
-                    isOpen
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
+                className={`overflow-hidden border-t border-zinc-800 transition-all duration-300 md:hidden ${isOpen
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
                     }`}
             >
                 <div className="space-y-1 px-4 py-4 sm:px-6">
@@ -109,34 +115,45 @@ export default function Navigation() {
                         Home
                     </Link>
                     <Link
-                        href="/home"
+                        href="/live"
                         onClick={() => setIsOpen(false)}
                         className="block rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white"
                     >
                         Live TV
                     </Link>
                     <Link
-                        href="/home"
+                        href="/movies"
                         onClick={() => setIsOpen(false)}
                         className="block rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white"
                     >
                         Movies
                     </Link>
                     <Link
-                        href="/home"
+                        href="/shows"
                         onClick={() => setIsOpen(false)}
                         className="block rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white"
                     >
                         Shows
                     </Link>
-
-                    <div className="border-t border-zinc-800 pt-3">
-                        <Link
-                            href="/login"
-                            onClick={() => setIsOpen(false)}
-                        className="block rounded-lg border border-zinc-700 px-4 py-3 text-center text-sm font-semibold transition hover:bg-zinc-900">
-                            Log In
-                        </Link>
+                        {/* finish button style */}
+                    <div className="border-t border-zinc-800 pt-4 transition-all duration-300 md:hidden">
+                        {isLoggedIn ? (
+                            <form action={logOut}>
+                                <button
+                                    type="submit"
+                                    className="block rounded-lg border border-zinc-700 px-4 py-3 text-center text-sm font-semibold transition hover:bg-zinc-900"
+                                >
+                                    Sign Out
+                                </button>
+                            </form>
+                        ) : (
+                            <Link
+                                href="/login"
+                                onClick={() => setIsOpen(false)}
+                                className="block rounded-lg border border-zinc-700 px-4 py-3 text-center text-sm font-semibold transition hover:bg-zinc-900">
+                                Log In
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>
