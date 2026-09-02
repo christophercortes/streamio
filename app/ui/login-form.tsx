@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 
 export default function LoginForm() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/';
+  const callbackUrl = searchParams.get('callbackUrl') || '/home';
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
     undefined,
@@ -59,7 +59,7 @@ export default function LoginForm() {
           </div>
         </div>
         <input type="hidden" name="redirectTo" value={callbackUrl} />
-        <button className="peer mt-4 bg-zinc-950 text-white block w-full rounded-md border border-gray-200 py-2 text-sm outline-2 transition hover:border-zinc-500 hover:bg-zinc-900">
+        <button className="peer mt-6 bg-zinc-950 text-white block w-full rounded-md border border-gray-200 py-4 text-sm outline-2 transition hover:border-zinc-500 hover:bg-zinc-900">
           Log In
         </button>
         <div
