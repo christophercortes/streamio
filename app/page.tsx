@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-zinc-900 text-white dark:bg-black">
       <main className="w-full flex-1">
-        <div className="mx-auto flex w-full max-w-7xl flex-col px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col px-8 py-6 sm:px-26 sm:py-8 lg:px-30 lg:py-10">
           <div className="mb-6">
             <h1 className="text-center text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl">
               Watch live TV from top channels
@@ -23,6 +23,9 @@ export default function Home() {
               Choose a channel and start watching live.
             </p>
           </div>
+
+
+          
           <ChannelCarousel
           selectedChanneld={selectedChannelId}
           onSelectedChannel={setSelectedChannelId}

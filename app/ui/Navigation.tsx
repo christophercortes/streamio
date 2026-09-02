@@ -141,7 +141,7 @@ export default function Navigation({
                             <form action={logOut}>
                                 <button
                                     type="submit"
-                                    className="block rounded-lg border border-zinc-700 px-4 py-3 text-center text-sm font-semibold transition hover:bg-zinc-900"
+                                    className="block w-full rounded-lg border border-zinc-700 px-4 py-3 text-center text-sm font-semibold transition hover:bg-zinc-900"
                                 >
                                     Sign Out
                                 </button>

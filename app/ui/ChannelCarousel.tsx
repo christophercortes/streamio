@@ -13,9 +13,12 @@ export default function ChannelCarousel({
     onSelectedChannel,
 }: ChannelCarouselProps) {
     return (
-        <section className="w-full min-w-0 overflow-hidden">
-            <div className="w-full min-w-0 overflow-x-auto px-4 pb-4 sm:px-6 lg:px-8">
-                <div className="flex w-max gap-4 sm:gap-5">
+        <section className="border border-white rounded-4xl px-2 py-2 mt-2 w-full min-w-0 overflow-hidden">
+            <p className=" p-4 font-semibold sm:text-2xl">
+                News plus Entertainment
+            </p>
+            <div className="flex w-full justify-center px-2 pb-4 sm:px-6 lg:px-8">
+                <div className="grid grid-flow-col grid-rows-3 justify-center gap-2 sm:gap-10 sm:grid-rows-2">
                     {channels.map((channel) => {
                         const isSelected = channel.id === selectedChanneld;
 
@@ -30,7 +33,7 @@ export default function ChannelCarousel({
                             >
                                 <div className={`flex mt-8 h-14 w-14 items-center justify-center rounded-full bg-white p-1.5 transition-all duration-200 sm:h-16 sm:w-16 md:h-20 md:w-20
                                     ${isSelected
-                                        ? "scale-105 ring-2 ring-white ring-offset-2 ring-offset-zinc-950"
+                                        ? "scale-105 ring-4 ring-yellow-200 ring-offset-2 ring-offset-zinc-950"
                                         : "ring-1 ring-zinc-700 group-hover:scale-105 group-hover:ring-zinc-400"
                                     }
                                     `}

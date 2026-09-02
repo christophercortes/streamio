@@ -6,7 +6,7 @@ const newsChannels = channels.filter((channel) => channel.id >= 10);
 
 export default function Page() {
     return (
-        <main className="min-h-screen bg-zinc-950 px-6 text-white">
+        <main className="min-h-screen pt-4 bg-zinc-950 px-6 text-white">
 
             <ChannelSection
                 title="Live Channels"
