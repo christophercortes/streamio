@@ -15,10 +15,8 @@ export default function ChannelCarousel() {
 
                         return (
                             <div
-                                className="group flex w-16 shrink-0 flex-col items-center gap-2 sm:w-20 md:w-24"
-                            >
-                                <div className="flex mt-8 h-14 w-14 items-center justify-center rounded-full bg-white p-1.5 transition-all duration-200 sm:h-16 sm:w-16 md:h-20 md:w-20"
-                                >
+                                className="group flex w-16 shrink-0 flex-col items-center gap-2 sm:w-20 md:w-24">
+                                <div className="flex mt-8 h-14 w-14 items-center justify-center rounded-full bg-white p-1.5 transition-all duration-200 sm:h-16 sm:w-16 md:h-20 md:w-20">
                                     <Image
                                         key={channel.id}
                                         src={channel.logo}
@@ -29,8 +27,7 @@ export default function ChannelCarousel() {
                                     />
                                 </div>
                                 {/* Channel names */}
-                                <span className="w-full truncate text-center text-[11px] font-medium sm:text-xs md:text-sm"
-                                >
+                                <span className="w-full truncate text-center text-[11px] font-medium sm:text-xs md:text-sm">
                                     {channel.name}
                                 </span>
                             </div>

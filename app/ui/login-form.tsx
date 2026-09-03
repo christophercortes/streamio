@@ -1,16 +1,15 @@
 'use client';
 
-import { useActionState } from 'react';
+import { useState, useActionState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 import { useSearchParams } from 'next/navigation';
+import { Eye, EyeOff } from 'lucide-react';
 
 export default function LoginForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') || '/home';
-  const [errorMessage, formAction, isPending] = useActionState(
-    authenticate,
-    undefined,
-  );
+  const [errorMessage, formAction, isPending] = useActionState(authenticate, undefined);
+  const [showPassword, SetShowPassword] = useState(false);
 
   return (
     <form action={formAction} className="space-y-3">
@@ -48,12 +47,24 @@ export default function LoginForm() {
               <input
                 className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
                 id="password"
-                type="password"
+                type={showPassword ? "text" : "password"} 
                 name="password"
                 placeholder="Enter password"
                 required
                 minLength={6}
               />
+              <button
+                type="button"
+                onClick={() => SetShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? (
+                    <EyeOff className="h-5 w-5"/>
+                ): (
+                    <Eye className='h-5 w-5'/>
+                )}
+              </button>
 
             </div>
           </div>
