@@ -5,7 +5,7 @@ import { channels } from "@/app/lib/channels";
 
 export default function ChannelCarousel() {
     return (
-        <section className="border border-white rounded-4xl px-2 py-2 mt-2 w-full min-w-0 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-yellow-800">
+        <section className="border border-white rounded-4xl px-2 py-2 mt-2 w-full min-w-0 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-red-800">
             <p className=" p-4 font-semibold sm:text-2xl">
                 News plus Entertainment
             </p>
