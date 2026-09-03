@@ -15,8 +15,7 @@ export default function Home() {
               Choose a channel and start watching live
             </p>
           </div>
-          <ChannelCarousel
-          />
+          <ChannelCarousel/>
           <div className="mt-6 flex justify-center sm:mt-8">
             <button
               type="button"
