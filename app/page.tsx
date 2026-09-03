@@ -1,16 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { channels } from "@/app/lib/channels";
 import ChannelCarousel from "@/app/ui/ChannelCarousel";
 
 export default function Home() {
-  const [selectedChannelId, setSelectedChannelId] = useState(channels[0].id);
-
-  const selectedChannel = channels.find(
-    (channel) => channel.id === selectedChannelId
-  )!;
-
   return (
     <div className="flex min-h-screen w-full flex-col bg-zinc-900 text-white dark:bg-black">
       <main className="w-full flex-1">
@@ -20,15 +12,10 @@ export default function Home() {
               Watch live TV from top channels
             </h1>
             <p className="mt-2 text-center text-sm font-semibold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl">
-              Choose a channel and start watching live.
+              Choose a channel and start watching live
             </p>
           </div>
-
-
-          
           <ChannelCarousel
-          selectedChanneld={selectedChannelId}
-          onSelectedChannel={setSelectedChannelId}
           />
           <div className="mt-6 flex justify-center sm:mt-8">
             <button
