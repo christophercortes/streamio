@@ -11,10 +11,12 @@ export default function ChannelSection({
     channels,
 }: ChannelSectionProps) {
     return (
-        <section className="mb-12">
-            <h2 className="mb-6 text-2xl font-semibold">{title}</h2>
+        <section className="mx-auto w-full max-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-6 text-2xl font-bold tracking-tight sm:text-3xl">
+                {title}
+            </h2>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-5">
                 {channels.map((channel) => (
                     <ChannelCard
                         key={channel.id}
