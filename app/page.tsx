@@ -19,7 +19,7 @@ export default function Home() {
             <h1 className="text-3xl px-2 font-bold tracking-tight sm:text-4xl mt-8 md:text-5xl">
               Watch live TV from top channels
             </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:base-2xl mt-6 md:text-lg">
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:base-2xl sm:mt-6 md:text-lg">
               Choose a channel and start watching live
             </p>
           </div>
