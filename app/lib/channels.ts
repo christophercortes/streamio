@@ -12,7 +12,7 @@ export const channels: Channel[] = [
         name: "Canal 13",
         description: "Canal en vivo",
         logo: "/channel0.png",
-        streamUrl: "https://dai.google.com/linear/hls/pa/event/nthipJzGQY-A-N0t6xCZhA/stream/7d13b112-c722-4341-853f-b08b5fb80c9b:SCL2/master.m3u8",
+        streamUrl: "https://dai.google.com/linear/hls/pa/event/nthipJzGQY-A-N0t6xCZhA/stream/bb49a7e3-d27f-404a-8525-b7bcce2eb839:SCL2/master.m3u8",
     },
     {
         id: 1,
@@ -33,7 +33,7 @@ export const channels: Channel[] = [
         name: "13 Kids",
         description: "Canal en vivo",
         logo: "/channel3.png",
-        streamUrl: "https://dai.google.com/linear/hls/pa/event/LhHrVtyeQkKZ-Ye_xEU75g/stream/2a729833-37f6-4fcf-aee8-7475a3c35dbb:SCL2/master.m3u8",
+        streamUrl: "https://dai.google.com/linear/hls/pa/event/LhHrVtyeQkKZ-Ye_xEU75g/stream/850dbfda-7870-4e34-b391-c05d884fbc20:SCL2/master.m3u8",
     },
     {
         id: 4,
@@ -48,6 +48,13 @@ export const channels: Channel[] = [
         description: "Canal en vivo",
         logo: "/channel5.png",
         streamUrl: "https://unlimited2-cl-isp.dps.live/mega/mega.smil/playlist.m3u8",
+    },
+    {
+        id: 6,
+        name: "TVN 3",
+        description: "Canal en vivo",
+        logo: "/channel6.png",
+        streamUrl: "https://mdstrm.com/live-stream-playlist/5653641561b4eba30a7e4929.m3u8",
     },
     {
         id: 10,
