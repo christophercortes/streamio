@@ -13,7 +13,7 @@ export default function Cinematic({
     video, category, title, description,
 }: CinematicProps) {
     return (
-        <section className="relative h-[250px] w-auto mb-6">
+        <section className="relative h-[250px] w-auto mb-6 md:h-[650px]">
             <video
                 autoPlay
                 muted
@@ -26,11 +26,10 @@ export default function Cinematic({
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
             <div className="absolute inset-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent" />
             <div className="relative z-10 mb-10 flex h-full items-center px-6 sm:px-10 md:px-14">
-                <div className="max-w-xl">
+                <div className="max-w-xl md:mt-20">
                     <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-yellow-400">
                         {category}
                     </p>
-
                     <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                         {title}
                     </h1>
