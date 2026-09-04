@@ -16,16 +16,16 @@ export default function Home() {
         />
         <div className="mx-auto w-full max-w-7xl flex-col">
           <div className="mb-8 text-center">
-            <h1 className="text-3xl px-2 font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <h1 className="text-3xl px-2 font-bold tracking-tight sm:text-4xl mt-8 md:text-5xl">
               Watch live TV from top channels
             </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:base-2xl md:text-lg">
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:base-2xl sm:mt-6 md:text-lg">
               Choose a channel and start watching live
             </p>
           </div>
 
           <ChannelCarousel />
-          <div className="mt-6 flex justify-center sm:mt-8">
+          <div className="my-6 flex justify-center sm:mt-8">
             <button
               type="button"
               className="group inline-flex items-center gap-2 rounded-lg px-3 py-4 text-sm font-semibold text-zinc-300 transition hover:bg-white/5 hover:text-white sm:text-base">

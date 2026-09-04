@@ -5,12 +5,12 @@ import { channels } from "@/app/lib/channels";
 
 export default function ChannelCarousel() {
     return (
-        <section className="mx-4 mt-8 w-auto min-w-0 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950 px-3 py-4 shadow-lg sm:mx-6 lg:mx-8">
-            <p className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">
+        <section className="mx-4 mt-8 w-auto min-w-0 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950 px-3 py-4 shadow-lg sm:mx-40 sm:pb-20 lg:mx-8">
+            <p className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl sm:pt-4">
                 News plus Entertainment
             </p>
             <div className="flex w-full justify-center px-2 pb-4 sm:px-6 lg:px-8">
-                <div className="grid grid-flow-col grid-rows-3 justify-center gap-3 sm:grid-rows-2 sm:gap-10">
+                <div className="grid grid-flow-col grid-rows-3 justify-center gap-3 sm:gap-10">
                     {channels.map((channel) => {
 
                         return (

@@ -15,7 +15,7 @@ export default function Navigation({
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 z-50 w-full border-b border-whit/10 bg-zinc-950/95 text-white backdrop-blur-md">
+        <nav className="sticky top-0 z-50 w-full border-b border-white/40 bg-zinc-950 text-white backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 md:px-8">
                 <Link
                     href="/"
