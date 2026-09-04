@@ -38,7 +38,7 @@ export default function Cinematic({
                     </p>
                     <div className="mt-6 flex gap-3">
                         <Link
-                            href="/live"
+                            href={`/channel/${4}`}
                             className="rounded-lg bg-yellow-400 px-6 py-3 text-sm text-black transition hover:bg-yellow-300"
                         >
                             Watch Now
