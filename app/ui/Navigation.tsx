@@ -15,7 +15,7 @@ export default function Navigation({
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="w-full border-b border-zinc-800 bg-zinc-950 text-white">
+        <nav className="sticky top-0 z-50 w-full border-b border-whit/10 bg-zinc-950/95 text-white backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 md:px-8">
                 <Link
                     href="/"
@@ -35,22 +35,23 @@ export default function Navigation({
                 <div className="hidden items-center gap-1 md:flex lg:gap-2">
                     <Link
                         href="/home"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
+                        className="group relative rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:text-white lg:px">
                         Home
+                        <span className="absolute inset-x-3 -bottom-0.5 h-0.5 origen-left scale-x-0 rounded-full bg-yellow-400 transition-transform duration-200 group-hover:scale-x-100" />
                     </Link>
                     <Link
                         href="/live"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
+                        className="group relative rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:text-white lg:px">
                         Live TV
                     </Link>
                     <Link
                         href="/movies"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
+                        className="group relative rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:text-white lg:px">
                         Movies
                     </Link>
                     <Link
                         href="/shows"
-                        className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white lg:px-4">
+                        className="group relative rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:text-white lg:px">
                         Shows
                     </Link>
                 </div>
@@ -59,7 +60,7 @@ export default function Navigation({
                         <form action={logOut}>
                             <button
                                 type="submit"
-                                className="rounded-lg border border-zinc-700 px-3 py-1.5 text-sm font-semibold transition hover:border-zinc-500 hover:bg-zinc-900 sm:px-4 sm:py-2 sm:text-base"
+                                className="rounded-lg bg-yellow-400 text-black px-3 py-1.5 text-sm font-semibold transition hover:bg-yellow-300 sm:px-4 sm:py-2 sm:text-base"
                             >
                                 Sign Out
                             </button>
@@ -67,9 +68,9 @@ export default function Navigation({
                     ) : (
                         <Link
                             href="/login"
-                            className="rounded-lg border border-zinc-700 px-3 py-1.5 text-sm font-semibold transition hover:border-zinc-500 hover:bg-zinc-900 sm:px-4 sm:py-2 sm:text-base"
+                            className="rounded-lg bg-yellow-400 text-black px-3 py-1.5 text-sm font-semibold transition hover:bg-yellow-300 sm:px-4 sm:py-2 sm:text-base"
                         >
-                            <span className="">Log In</span>
+                            Log In
                         </Link>
                     )}
                 </div>
@@ -85,14 +86,14 @@ export default function Navigation({
                     <div className="space-y-1.5">
                         <span
                             className={`block h-0.5 w-6 bg-current transition ${isOpen
-                                    ? "translate-y-2 rotate-45"
-                                    : ""
+                                ? "translate-y-2 rotate-45"
+                                : ""
                                 }`}
                         />
                         <span
                             className={`block h-0.5 w-6 bg-current transition ${isOpen
-                                    ? "-translate-y-2 -rotate-45"
-                                    : ""
+                                ? "-translate-y-2 -rotate-45"
+                                : ""
                                 }`}
                         />
                     </div>
@@ -102,8 +103,8 @@ export default function Navigation({
             {/* Mobile menu*/}
             <div
                 className={`overflow-hidden border-t border-zinc-800 transition-all duration-300 md:hidden ${isOpen
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
                     }`}
             >
                 <div className="space-y-1 px-4 py-4 sm:px-6">
@@ -135,13 +136,13 @@ export default function Navigation({
                     >
                         Shows
                     </Link>
-                        {/* finish button style */}
+                    {/* finish button style */}
                     <div className="border-t border-zinc-800 pt-4 transition-all duration-300 md:hidden">
                         {isLoggedIn ? (
                             <form action={logOut}>
                                 <button
                                     type="submit"
-                                    className="block w-full rounded-lg border border-zinc-700 px-4 py-3 text-center text-sm font-semibold transition hover:bg-zinc-900"
+                                    className="block w-full rounded-lg border border-zinc-700 px-4 py-3 text-black text-center text-sm font-semibold bg-yellow-400 transition hover:bg-yellow-300"
                                 >
                                     Sign Out
                                 </button>
@@ -150,7 +151,7 @@ export default function Navigation({
                             <Link
                                 href="/login"
                                 onClick={() => setIsOpen(false)}
-                                className="block rounded-lg border border-zinc-700 px-4 py-3 text-center text-sm font-semibold transition hover:bg-zinc-900">
+                                className="block rounded-lg border border-zinc-700 px-4 py-3 text-black text-center text-sm font-semibold bg-yellow-400 transition hover:bg-yellow-300">
                                 Log In
                             </Link>
                         )}
