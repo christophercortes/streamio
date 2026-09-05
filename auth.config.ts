@@ -11,7 +11,8 @@ export const authConfig = {
         nextUrl.pathname.startsWith('/home') ||
         nextUrl.pathname.startsWith('/live') ||
         nextUrl.pathname.startsWith('/movies') ||
-        nextUrl.pathname.startsWith('/shows');
+        nextUrl.pathname.startsWith('/shows') || 
+        nextUrl.pathname.startsWith('/channel');
       if (isProtectedRoute) {
         return isLoggedIn;
       }
