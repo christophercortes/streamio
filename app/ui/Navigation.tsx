@@ -136,12 +136,13 @@ export default function Navigation({
                     >
                         Shows
                     </Link>
-                    {/* finish button style */}
+
                     <div className="border-t border-zinc-800 pt-4 transition-all duration-300 md:hidden">
                         {isLoggedIn ? (
                             <form action={logOut}>
                                 <button
                                     type="submit"
+                                    onClick={() => setIsOpen(false)}
                                     className="block w-full rounded-lg border border-zinc-700 px-4 py-3 text-black text-center text-sm font-semibold bg-yellow-400 transition hover:bg-yellow-300"
                                 >
                                     Sign Out
