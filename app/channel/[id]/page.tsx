@@ -22,7 +22,7 @@ export default async function ChannelPage({ params }: Props) {
     return (
         <main className="min-h-screen bg-zinc-950 px-6 py-2 text-white">
             <h1 className="mb-2 text-3xl font-bold">{channel.name}</h1>
-            <p className="text-zinc-400">{channel.description}</p>
+            <p className="text-zinc-400">{channel.country}</p>
             <div className="mt-6 aspect-video rounded-xl bg-black">
                 {channel.streamUrl ? (
                     <VideoPlayer src={channel.streamUrl} />
