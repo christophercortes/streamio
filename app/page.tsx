@@ -2,10 +2,11 @@
 
 import ChannelCarousel from "@/app/ui/ChannelCarousel";
 import Cinematic from "./ui/Cinematic";
+import { channels } from "./lib/channels";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-zinc-900 text-white dark:bg-black">
+    <div className="flex min-h-screen w-full flex-col">
       <main className="w-full flex-1">
 
         <Cinematic
@@ -24,7 +25,16 @@ export default function Home() {
             </p>
           </div>
 
-          <ChannelCarousel />
+          <ChannelCarousel
+            title="News + Entertainment"
+            channels={channels.filter(
+              (channel) => channel.category === "Entertainment").slice(0, 9)}
+          />
+          {/* <ChannelCarousel
+            title="International"
+            channels={channels.filter(
+              (channel) => channel.country === "USA")}
+          /> */}
           <div className="my-6 flex justify-center sm:mt-8">
             <button
               type="button"
