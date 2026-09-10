@@ -103,7 +103,7 @@ export const channels: Channel[] = [
         country: "Chile",
         category: "Entertainment",
         logo: "/channel8.png",
-        streamUrl: "https://mdstrm.com/live-stream-playlist/533adcc949386ce765657d7c.m3u8",
+        streamUrl: "",
         tvgId: "TV.Chile.cl",
     },
     {
@@ -168,12 +168,12 @@ export const channels: Channel[] = [
     },
     {
         id: 22,
-        name: "El trece",
-        description: "El trece",
+        name: "Telefe",
+        description: "Telefe",
         country: "Argentina",
         category: "Entertainment",
         logo: "/channel22.png",
-        streamUrl: "https://livetrx01.vodgc.net/eltrecetv/index.m3u8",
-        tvgId: "Canal.13.de.Argentina.(El.Trece).ar",
+        streamUrl: "http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8",
+        tvgId: "",
     },
 ];
