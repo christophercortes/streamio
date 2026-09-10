@@ -19,8 +19,10 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
     const hlsRef = useRef<Hls | null>(null);
 
     const [status, setStatus] = useState("Loading stream...");
-    const [qualities, setQualities] = useState<Quality[] >([]);
+    const [qualities, setQualities] = useState<Quality[]>([]);
     const [currentQuality, setCurrentquality] = useState<number>(-1);
+
+    const [showstatus, setShowStatus] = useState(true);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -44,7 +46,7 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
 
         console.log("Using hls.js");
 
-        const hls = new Hls({            
+        const hls = new Hls({
             enableWorker: true,
             startLevel: -1,
             capLevelToPlayerSize: false,
@@ -67,7 +69,7 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
                 }))
                 .filter((quality) => quality.height > 0)
                 .sort((a, b) => b.height - a.height);
-            
+
             console.log("Available qualities:", availableQualities);
 
             setQualities(availableQualities);
@@ -91,6 +93,16 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
             hlsRef.current = null;
         };
     }, [src]);
+
+    useEffect(() => {
+        setShowStatus(true);
+
+        const timer = setTimeout(() => {
+            setShowStatus(false)
+        }, 2500);
+
+        return () => clearTimeout(timer);
+    }, [status]);
 
     const changeQuality = (levelIndex: number) => {
         const hls = hlsRef.current;
@@ -124,11 +136,39 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
                         className="h-full w-full object-contain"
                     />
 
-                    <div className="absolute bottom-16 left-4 rounded bg-black/70 px-3 py-2 text-xs text-white backdrop-blur-sm md:text-sm">
+                    <div className={`absolute bottom-16 left-4 rounded bg-black/70 px-3 py-2 text-xs text-white backdrop-blur-sm tranistion-opacity duration-500 md:text-sm
+                        ${showstatus
+                            ? "opacity-100"
+                            : "pointer-events-none opacity-0"
+                        }`}
+                    >
                         {status}
                     </div>
 
-                    {/* Quality selector */} {qualities.length > 0 && (<div className="absolute right-4 bottom-16"> <select value={currentQuality} onChange={(e) => changeQuality(Number(e.target.value))} className="cursor-pointer rounded bg-black/80 px-3 py-2 text-xs font-medium text-white outline-none backdrop-blur-sm hover:bg-black md:text-sm" aria-label="Video quality" > <option value={-1}>Auto</option> {qualities.map((quality) => (<option key={quality.index} value={quality.index} > {quality.height}p </option>))} </select> </div>)}
+                    {/* Quality selector */}
+                    {qualities.length > 0 && (
+                        <div className={`absolute bottom-16 right-4 transition-opacity duration-500
+                        ${showstatus
+                                ? "opacity-100"
+                                : "pointer-events-none opacity-0"
+                            }`}
+                        >
+                            <select value={currentQuality}
+                                onChange={(e) =>
+                                    changeQuality(Number(e.target.value))}
+                                className="cursor-pointer rounded bg-black/80 px-3 py-2 text-xs font-medium text-white outline-none backdrop-blur-sm hover:bg-black md:text-sm"
+                                aria-label="Video quality" >
+                                <option value={-1}>
+                                    Auto
+                                </option>
+                                {qualities.map((quality) =>
+                                (<option
+                                    key={quality.index}
+                                    value={quality.index} >
+                                    {quality.height}p
+                                </option>))}
+                            </select>
+                        </div>)}
                 </div>
             </div>
         </section>
