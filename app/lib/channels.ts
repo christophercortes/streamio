@@ -206,7 +206,7 @@ export const channels: Channel[] = [
         streamUrl: "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
         tvgId: "",
     },
-     {
+    {
         id: 26,
         name: "Record News",
         description: "Las estrellas",
@@ -214,6 +214,26 @@ export const channels: Channel[] = [
         category: "News",
         logo: "/channel26.png",
         streamUrl: "https://rnw-rn.otteravision.com/rnw/rn/rnw_rn.m3u8",
+        tvgId: "",
+    },
+    {
+        id: 27,
+        name: "France 24",
+        description: "France 24",
+        country: "France",
+        category: "News",
+        logo: "/channel27.png",
+        streamUrl: "https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8",
+        tvgId: "",
+    },
+    {
+        id: 28,
+        name: "Fifa +",
+        description: "Fifa +",
+        country: "",
+        category: "Sports",
+        logo: "/channel28.png",
+        streamUrl: "https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8",
         tvgId: "",
     },
 ];
