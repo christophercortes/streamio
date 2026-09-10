@@ -103,7 +103,7 @@ export const channels: Channel[] = [
         country: "Chile",
         category: "Entertainment",
         logo: "/channel8.png",
-        streamUrl: "",
+        streamUrl: "https://mdstrm.com/live-stream-playlist/533adcc949386ce765657d7c.m3u8",
         tvgId: "TV.Chile.cl",
     },
     {
