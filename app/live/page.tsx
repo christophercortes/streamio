@@ -3,7 +3,7 @@ import { channels } from "../lib/channels"
 import VideoPlayer from "../ui/VideoPlayer"
 import Image from "next/image";
 import Link from "next/link";
-import { getChannelSchedules } from "../lib/epg";
+import { getChannelSchedules, debugFindEpgChannel } from "../lib/epg";
 
 function formatTime(date: Date) {
     return new Intl.DateTimeFormat("en-us", {
@@ -13,6 +13,9 @@ function formatTime(date: Date) {
 }
 
 export default async function LiveTV() {
+
+    // const epgResults = await debugFindEpgChannel("");
+    // console.log(epgResults);
 
     const channel = channels.find(
         (channel) => channel.id === Number(0)

@@ -20,10 +20,11 @@ export default function ChannelCarousel({
                 <div className="grid grid-flow-col grid-rows-3 justify-center gap-3 sm:gap-10">
                     {channels.map((channel) => {
                         return (
-                            <div className="group flex w-16 shrink-0 flex-col items-center gap-2 sm:w-20 md:w-24">
+                            <div
+                                key={channel.id}
+                                className="group flex w-16 shrink-0 flex-col items-center gap-2 sm:w-20 md:w-24">
                                 <div className="flex mt-8 h-14 w-14 items-center justify-center rounded-full bg-white p-1.5 transition-all duration-200 sm:h-16 sm:w-16 md:h-20 md:w-20">
                                     <Image
-                                        key={channel.id}
                                         src={channel.logo}
                                         alt={channel.name}
                                         width={80}

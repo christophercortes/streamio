@@ -50,6 +50,12 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
             enableWorker: true,
             startLevel: -1,
             capLevelToPlayerSize: false,
+
+            maxBufferLength: 30,
+            maxMaxBufferLength: 60,
+
+            liveSyncDurationCount: 3,
+            liveMaxLatencyDurationCount: 6,
         });
 
         hlsRef.current = hls;
@@ -85,6 +91,23 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
 
             if (data.fatal) {
                 setStatus(`❌ Not available: ${data.details}`);
+
+                switch (data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.log("Fatal network error. Restarting load...");
+                        hls.startLoad();
+                        break;
+                    
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.log("Fatal media error. Recovering...");
+                        hls.recoverMediaError();
+                        break;
+                    
+                    default:
+                        console.log("Fatal unrecoverable error.");
+                        hls.destroy();
+                        break;
+                }
             }
         });
 
