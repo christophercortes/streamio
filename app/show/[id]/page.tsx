@@ -20,11 +20,11 @@ export default async function ShowsPage({ params }: Props) {
     }
 
     return (
-        <main>
-            <h1>
+        <main className="min-h-screen bg-zinc-950 px-6 py-2">
+            <h1 className="mb-2 text-3xl font-bold">
                 {show.name}
             </h1>
-            <div>
+            <div className="mt-6 aspect-video rounded-xl bg-black">
                 {show.streamUrl ? (
                     <VideoPlayer src={show.streamUrl} />
                 ) : (

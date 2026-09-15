@@ -35,7 +35,7 @@ export default async function ChannelPage({ params }: Props) {
     const next = schedule?.nextProgram ?? null;
 
     return (
-        <main className="min-h-screen bg-zinc-950 px-6 py-2 text-white">
+        <main className="min-h-screen bg-zinc-950 px-6 py-2">
             <section>
                 <h1 className="mb-2 text-3xl font-bold">{channel.name}</h1>
                 <p className="text-zinc-400">{channel.country}</p>
