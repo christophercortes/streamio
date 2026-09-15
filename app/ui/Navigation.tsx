@@ -23,7 +23,7 @@ export default function Navigation({
                     onClick={() => setIsOpen(false)}
                 >
                     <Image
-                        src="/logo.png"
+                        src="/logo/logo.png"
                         alt="streamio+"
                         width={252}
                         height={100}
