@@ -10,7 +10,7 @@ export default function Home() {
       <main className="w-full flex-1">
 
         <Cinematic
-          video="/pampa.mp4"
+          video="/channels/pampa.mp4"
           category="Teleserie"
           title="Pampa Ilusion"
           description="from the 90's"
