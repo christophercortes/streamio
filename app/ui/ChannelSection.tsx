@@ -22,7 +22,6 @@ export default function ChannelSection({
                         key={channel.id}
                         id={channel.id}
                         name={channel.name}
-                        description=""
                         logo={channel.logo}
                     />
                 ))}

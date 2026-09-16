@@ -30,11 +30,7 @@ export default function Home() {
             channels={channels.filter(
               (channel) => channel.category === "Entertainment").slice(0, 9)}
           />
-          {/* <ChannelCarousel
-            title="International"
-            channels={channels.filter(
-              (channel) => channel.country === "USA")}
-          /> */}
+          
           <div className="my-6 flex justify-center sm:mt-8">
             <button
               type="button"

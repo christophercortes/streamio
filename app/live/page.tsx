@@ -18,7 +18,7 @@ export default async function LiveTV() {
     // console.log(epgResults);
 
     const channel = channels.find(
-        (channel) => channel.id === Number(0)
+        (channel) => channel.id === Number(1)
     );
 
     if (!channel) {
@@ -30,7 +30,7 @@ export default async function LiveTV() {
 
     return (
         <main className="min-h-screen">
-            <section className="mx-auto w-full max-w-7xl px-4 py sm:px-6 lg:px-8">
+            <section className="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
                 <div className="mb-5">
                     <h1 className="mt-5 text-2xl font-bold tracking-tight sm:text-3xl">
                         Live Streaming
