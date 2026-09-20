@@ -19,7 +19,7 @@ export default function Navigation({
             <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 md:px-8">
                 <Link
                     href="/"
-                    className="flex-shrink-0 items-center"
+                    className="flex shrink-0 items-center"
                     onClick={() => setIsOpen(false)}
                 >
                     <Image
