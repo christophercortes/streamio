@@ -325,7 +325,7 @@ export const channels: Channel[] = [
         category: "Kids",
         logo: "/channels/chtvcultura.png",
         streamUrl: "https://player-tvcultura.stream.uol.com.br/live/tvcultura.m3u8",
-        tvgId: "",
+        tvgId: "São.Paulo/SP..Cultura.br",
     },
     {
         id: 32,
@@ -335,7 +335,7 @@ export const channels: Channel[] = [
         category: "Entertainment",
         logo: "/channels/chtve.png",
         streamUrl: "http://streaming.procergs.com.br:1935/tve/stve/playlist.m3u8",
-        tvgId: "",
+        tvgId: "São.Paulo/SP..TVE.International.br",
     },
     {
         id: 33,
@@ -345,7 +345,7 @@ export const channels: Channel[] = [
         category: "Entertainment",
         logo: "/channels/chlasestrellas.png",
         streamUrl: "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
-        tvgId: "",
+        tvgId: "Canal.Las.Estrellas.(Chile).cl",
     },
     {
         id: 34,
@@ -917,5 +917,15 @@ export const channels: Channel[] = [
         logo: "/channels/chucv.png",
         streamUrl: "https://unlimited1-cl-isp.dps.live/ucvtv2/ucvtv2.smil/playlist.m3u8",
         tvgId: "Canal.UCV.Televisión.cl",
+    },
+    {
+        id: 91,
+        name: "Movies 90s",
+        language: "English",
+        country: "USA",
+        category: "Entertainment",
+        logo: "/channels/placeholder.png",
+        streamUrl: "https://jmp2.uk/plu-5ca525b650be2571e3943c63.m3u8",
+        tvgId: "",
     },
 ];
