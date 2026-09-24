@@ -15,6 +15,8 @@ const user = [
         address: 'Vicuna Mackenna, La Florida',
         password: 'danilo@',
     }
+
+    // ('Test', 'test@email.com', '+569874521', 'San Jose', '$2b$12$reNjfTNRmkr1X/ZRD3ZVf.JEgdXqKQ3axqweTFhoTtasLlyUUisy3')
 ];
 
 export { user };
