@@ -918,14 +918,4 @@ export const channels: Channel[] = [
         streamUrl: "https://unlimited1-cl-isp.dps.live/ucvtv2/ucvtv2.smil/playlist.m3u8",
         tvgId: "Canal.UCV.Televisión.cl",
     },
-    {
-        id: 91,
-        name: "Movies 90s",
-        language: "English",
-        country: "USA",
-        category: "Entertainment",
-        logo: "/channels/placeholder.png",
-        streamUrl: "https://jmp2.uk/plu-5ca525b650be2571e3943c63.m3u8",
-        tvgId: "",
-    },
 ];
